@@ -1,0 +1,10 @@
+@mixin remove-default {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+@mixin move-element-to-front {
+  position: absolute;
+  z-index: 1;
+}

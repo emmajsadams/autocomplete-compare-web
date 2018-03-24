@@ -1,0 +1,32 @@
+<div>
+    <!--- 
+        TODO: autoFocus as param 
+        TODO: Invoke OnChange for oninput or onkeydown events which are not supported. Only onkeypress is :(.
+    -->
+    <input @bind(query) autoFocus="true" /> 
+
+    <!-- TODO: Style this button -->
+    <button @onclick(() => OnChange(query))>Search</button> 
+    @if (results != null && results.Count() > 0) 
+    {
+        <ul>
+            @foreach (var result in results)
+            {
+                <li><button class="result" @onclick(() => ClearAndSelect(result))>@result.Label</button></li>
+            }
+        </ul>
+    }
+</div>
+
+@functions
+{
+    public Func<string, Task> OnChange { get; set; }
+    public Func<SearchResult, Task> OnSelect { get; set; }
+    public SearchResult[] results { get; set; }
+    private string query = string.Empty;
+
+    void ClearAndSelect(SearchResult result) {
+        query = result.Label;
+        OnSelect(result);
+    }
+}

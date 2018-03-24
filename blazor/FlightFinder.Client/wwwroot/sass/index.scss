@@ -1,0 +1,23 @@
+﻿@import './mixins.scss';
+
+body {
+  @include remove-default();
+}
+
+* {
+  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+
+  .logo {
+    max-width: 300px;
+    width: 50%;
+  }
+}
+
+@import './components/dropdown.scss';

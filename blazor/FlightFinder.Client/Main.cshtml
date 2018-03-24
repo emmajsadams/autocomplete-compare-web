@@ -1,0 +1,22 @@
+﻿@inject HttpClient Http
+@inject AppState State
+
+<div class="search">
+    <img class="logo" src="images/logo.png"/>
+
+    <!-- TODO: Should this div be outside the Dropdown? Currently the max-width won't work without it -->
+    <div class="dropdown">
+        <Dropdown results=State.SearchResults OnChange=State.Search OnSelect=State.SetSelectedResult />
+    </div>
+    @if (State.SelectedResult != null) {
+        <p>@State.SelectedResult.Label - @State.SelectedResult.Value</p>
+    }
+</div>
+
+@functions
+{
+    protected override void OnInit()
+    {
+        State.OnChange += StateHasChanged;
+    }
+}

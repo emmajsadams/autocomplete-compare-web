@@ -1,0 +1,10 @@
+{
+  "extends": "tslint:recommended",
+  "defaultSeverity": "error",
+  "rules": {
+    "interface-name": [true, "never-prefix"],
+    "no-string-literal": false,
+    "no-console": false,
+    "no-var-requires": false
+  }
+}

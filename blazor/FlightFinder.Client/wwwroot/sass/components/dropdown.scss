@@ -1,0 +1,44 @@
+.dropdown {
+  $neutral-color: #f9f9f9;
+  $hover-color: #e2e2e2;
+  $shadow-color: rgba(0,0,0,0.2);
+  $default-shadow: 0 0 .2em $shadow-color;
+
+  @mixin set-width {
+    width: 100%;
+    max-width: 640px;
+  }
+
+  @include set-width();
+  box-shadow: $default-shadow;
+
+  input, button.result {
+    @include remove-default();
+    @include set-width();
+    background-color: $neutral-color;
+    text-align: left;
+    padding: .5em;
+  }
+
+  input:hover, input:focus {
+    box-shadow: 0 0 .4em $shadow-color;
+    outline: none;
+  }
+
+  button.result:hover, button.result:focus {
+    background-color: $hover-color;
+    outline: none;
+  }
+
+  ul {
+    @include remove-default();
+    @include move-element-to-front();
+    @include set-width();
+    list-style-type: none;
+    box-shadow: $default-shadow;
+  }
+
+  li {
+    @include remove-default();
+  }
+}
