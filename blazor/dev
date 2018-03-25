@@ -1,3 +1,5 @@
 #!/bin/bash
 
+# TODO: Consider using Dockerfile.dev instead of this? Pros & cons of native vs docker
+cd ./FlightFinder.Server
 dotnet run & sass --watch ../FlightFinder.Client/wwwroot/sass/index.scss:../FlightFinder.Client/wwwroot/index.css && kill $!

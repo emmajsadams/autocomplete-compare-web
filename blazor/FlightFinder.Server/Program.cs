@@ -20,7 +20,7 @@ namespace FlightFinder.Server
                     .AddCommandLine(args)
                     .Build())
                 .UseStartup<Startup>()
-                .UseUrls("http://0.0.0.0:5000/")
+                .UseUrls("http://0.0.0.0:5000/") // 0.0.0.0 is necessary for docker
                 .Build();
     }
 }

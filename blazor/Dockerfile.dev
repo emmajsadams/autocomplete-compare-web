@@ -1,0 +1,7 @@
+FROM microsoft/dotnet:2.1-sdk
+FROM ruby:2.3.0
+RUN gem install sass --no-user-install
+COPY . .
+WORKDIR ./FlightFinder.Server
+EXPOSE 5000
+CMD dotnet run & sass --watch ../FlightFinder.Client/wwwroot/sass/index.scss:../FlightFinder.Client/wwwroot/index.css && kill $!
