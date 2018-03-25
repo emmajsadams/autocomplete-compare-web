@@ -1,5 +1,10 @@
 #!/bin/bash
 
 # TODO: Consider using Dockerfile.dev instead of this? Pros & cons of native vs docker
+# docker build -t web-compare-dev -f Dockerfile.dev .
+# docker stop web-compare-dev
+# docker rm web-compare-dev
+# docker run -i -t --rm -v $(pwd):/blazor -p 5000:5000 --name web-compare-dev web-compare-dev
+
 cd ./FlightFinder.Server
-dotnet run & sass --watch ../FlightFinder.Client/wwwroot/sass/index.scss:../FlightFinder.Client/wwwroot/index.css && kill $!
+dotnet watch run & sass --watch ../FlightFinder.Client/wwwroot/sass/index.scss:../FlightFinder.Client/wwwroot/index.css && kill $!

@@ -21,6 +21,7 @@
   }
 
   .search {
+    width: inherit;
     display: flex;
     flex-direction: row;
     box-shadow: $default-shadow;
@@ -50,7 +51,6 @@
 
     li {
       @include remove-default();
-      @include button-style();
       width: inherit;
     }
 

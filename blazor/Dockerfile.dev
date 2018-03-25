@@ -1,7 +1,12 @@
 FROM microsoft/dotnet:2.1-sdk
-FROM ruby:2.3.0
-RUN gem install sass --no-user-install
-COPY . .
-WORKDIR ./FlightFinder.Server
+RUN apt-get update
+RUN apt-get install -y ruby-full rubygems-integration
+RUN gem install sass -v 3.2.19
+# RUN gem install rb-inotify -v 0.9
+# RUN gem install compass
+COPY . /blazor
+WORKDIR /blazor/FlightFinder.Server
 EXPOSE 5000
-CMD dotnet run & sass --watch ../FlightFinder.Client/wwwroot/sass/index.scss:../FlightFinder.Client/wwwroot/index.css && kill $!
+RUN dotnet restore
+CMD dotnet watch run & sass --watch ../FlightFinder.Client/wwwroot/sass/index.scss:../FlightFinder.Client/wwwroot/index.css && kill $!
+# CMD dotnet watch run 

@@ -19,3 +19,4 @@ CMD dotnet run
 # CMD
 # docker run -i -t --rm -p 80:5000 --name web-compare web-compare
 
+# 2.1.300-preview1-sdk, 2.1-sdk (2.1/sdk/stretch/amd64/Dockerfile)
