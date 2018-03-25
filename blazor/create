@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker-machine create -d digitalocean --digitalocean-access-token $1 --digitalocean-image rancheros --digitalocean-region sfo2 --digitalocean-size s-1vcpu-1gb --digitalocean-ssh-user rancher web-compare

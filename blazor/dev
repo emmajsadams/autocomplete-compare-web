@@ -1,0 +1,3 @@
+#!/bin/bash
+
+dotnet run & sass --watch ../FlightFinder.Client/wwwroot/sass/index.scss:../FlightFinder.Client/wwwroot/index.css && kill $!

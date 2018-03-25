@@ -1,0 +1,8 @@
+#!/bin/bash
+
+docker-machine env web-compare
+eval $(docker-machine env web-compare)
+docker build -t web-compare .
+docker stop web-compare
+docker rm web-compare
+docker run -d --rm -p 80:5000 --name web-compare web-compare
