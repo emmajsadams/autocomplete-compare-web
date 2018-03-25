@@ -4,11 +4,16 @@ Blazor is a C# WebAssembly framework for creating full-stack C# web apps. It sti
 
 Styles are managed via sass. The main sass file is located in `FlightFinder.Client/wwwroot/sass/index.scss` which needs to be compiled down to css located at `FlightFinder.Client/wwwroot/index.css`. This project uses the ruby `sass` gem to accomplish this on change.
 
-## Setup
+## Deploy
 * Install Docker https://docs.docker.com/install/
+* Create docker-machine with name `web-compare` as target for deployment
+* Run ./deploy
+
+# Development
 * Install Ruby (Mac users can skip this and use system default ruby) - https://www.ruby-lang.org/en/documentation/installation/
 * Install SASS - https://sass-lang.com/install
 * Install dotnet & blazor - https://blogs.msdn.microsoft.com/webdev/2018/03/22/get-started-building-net-web-apps-in-the-browser-with-blazor/#get-started
+* Run ./dev
 
 # Evaluation
 

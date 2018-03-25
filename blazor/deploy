@@ -1,9 +1,7 @@
 #!/bin/bash
 
-docker run -v ${pwd}:/src --rm larryprice/sass
-docker-machine env web-compare
-eval $(docker-machine env web-compare)
-docker build -t web-compare .
-docker stop web-compare
-docker rm web-compare
-docker run -d --rm -p 80:5000 --name web-compare web-compare
+NAME="web-compare"
+docker-machine env $NAME
+docker build -t $NAME .
+docker rm -f $NAME
+docker run -d --rm -p 80:5000 --name $NAME $NAME
