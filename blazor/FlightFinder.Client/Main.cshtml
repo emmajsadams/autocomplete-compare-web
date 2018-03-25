@@ -3,11 +3,7 @@
 
 <div class="search">
     <img class="logo" src="images/logo.png"/>
-
-    <!-- TODO: Should this div be outside the Dropdown? Currently the max-width won't work without it -->
-    <div class="dropdown">
-        <Dropdown results=State.SearchResults OnChange=State.Search OnSelect=State.SetSelectedResult />
-    </div>
+    <Dropdown results=State.SearchResults OnChange=State.Search OnSelect=State.SetSelectedResult />
     @if (State.SelectedResult != null) {
         <p>@State.SelectedResult.Label - @State.SelectedResult.Value</p>
     }

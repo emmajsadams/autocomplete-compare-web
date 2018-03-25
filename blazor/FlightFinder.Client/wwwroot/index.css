@@ -15,38 +15,66 @@ body {
     max-width: 300px;
     width: 50%; }
 
-.dropdown {
-  width: 100%;
-  max-width: 640px;
+@media only screen and (max-width: 640px) {
+  .dropdown {
+    width: 100vw; } }
+@media only screen and (min-width: 640px) {
+  .dropdown {
+    width: 640px; } }
+.dropdown .search {
+  display: flex;
+  flex-direction: row;
   box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2); }
-  .dropdown input, .dropdown button.result {
+  .dropdown .search input {
     margin: 0;
     padding: 0;
     border: 0;
-    width: 100%;
-    max-width: 640px;
     background-color: #f9f9f9;
     text-align: left;
-    padding: .5em; }
-  .dropdown input:hover, .dropdown input:focus {
+    padding: .5em;
+    width: 90%; }
+  .dropdown .search input:hover, .dropdown .search input:focus {
     box-shadow: 0 0 0.4em rgba(0, 0, 0, 0.2);
     outline: none; }
-  .dropdown button.result:hover, .dropdown button.result:focus {
-    background-color: #e2e2e2;
-    outline: none; }
-  .dropdown ul {
+  .dropdown .search button {
     margin: 0;
     padding: 0;
     border: 0;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    max-width: 640px;
-    list-style-type: none;
-    box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2); }
-  .dropdown li {
+    background-color: #f9f9f9;
+    text-align: left;
+    padding: .5em;
+    width: 10%; }
+.dropdown .results {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  z-index: 1;
+  width: inherit;
+  list-style-type: none;
+  box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2); }
+  .dropdown .results li {
     margin: 0;
     padding: 0;
-    border: 0; }
+    border: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #f9f9f9;
+    text-align: left;
+    padding: .5em;
+    width: inherit; }
+  .dropdown .results button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #f9f9f9;
+    text-align: left;
+    padding: .5em;
+    width: inherit; }
+  .dropdown .results button:hover, .dropdown .results button:focus {
+    background-color: #e2e2e2;
+    outline: none;
+    width: inherit; }
 
 /*# sourceMappingURL=index.css.map */

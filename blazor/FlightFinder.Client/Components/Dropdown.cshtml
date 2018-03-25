@@ -1,18 +1,18 @@
-<div>
+<div class="dropdown">
     <!--- 
         TODO: autoFocus as param 
         TODO: Invoke OnChange for oninput or onkeydown events which are not supported. Only onkeypress is :(.
     -->
-    <input @bind(query) autoFocus="true" /> 
-
-    <!-- TODO: Style this button -->
-    <button @onclick(() => OnChange(query))>Search</button> 
+    <div class="search">
+        <input @bind(query) autoFocus="true" />
+        <button class="search" @onclick(() => OnChange(query))>Search</button> 
+    </div>    
     @if (results != null && results.Count() > 0) 
     {
-        <ul>
+        <ul class="results">
             @foreach (var result in results)
             {
-                <li><button class="result" @onclick(() => ClearAndSelect(result))>@result.Label</button></li>
+                <li><button @onclick(() => ClearAndSelect(result))>@result.Label</button></li>
             }
         </ul>
     }

@@ -3,42 +3,67 @@
   $hover-color: #e2e2e2;
   $shadow-color: rgba(0,0,0,0.2);
   $default-shadow: 0 0 .2em $shadow-color;
+  $dropdown-size: 640px;
 
-  @mixin set-width {
-    width: 100%;
-    max-width: 640px;
+  @media only screen and (max-width: $dropdown-size) {
+    width: 100vw;
   }
 
-  @include set-width();
-  box-shadow: $default-shadow;
+  @media only screen and (min-width: $dropdown-size) {
+    width: $dropdown-size;
+  }
 
-  input, button.result {
+  @mixin button-style() {
     @include remove-default();
-    @include set-width();
     background-color: $neutral-color;
     text-align: left;
     padding: .5em;
   }
 
-  input:hover, input:focus {
-    box-shadow: 0 0 .4em $shadow-color;
-    outline: none;
+  .search {
+    display: flex;
+    flex-direction: row;
+    box-shadow: $default-shadow;
+
+    input {
+      @include button-style();
+      width: 90%;
+    }
+
+    input:hover, input:focus {
+      box-shadow: 0 0 .4em $shadow-color;
+      outline: none;
+    }
+  
+    button {
+      @include button-style();
+      width: 10%;
+    }
   }
 
-  button.result:hover, button.result:focus {
-    background-color: $hover-color;
-    outline: none;
-  }
-
-  ul {
+  .results {
     @include remove-default();
     @include move-element-to-front();
-    @include set-width();
+    width: inherit;
     list-style-type: none;
     box-shadow: $default-shadow;
+
+    li {
+      @include remove-default();
+      @include button-style();
+      width: inherit;
+    }
+
+    button {
+      @include button-style();
+      width: inherit;
+    }
+  
+    button:hover, button:focus {
+      background-color: $hover-color;
+      outline: none;
+      width: inherit;
+    }
   }
 
-  li {
-    @include remove-default();
-  }
 }
