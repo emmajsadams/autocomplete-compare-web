@@ -4,6 +4,8 @@ Blazor is a C# WebAssembly framework for creating full-stack C# web apps. It sti
 
 Styles are managed via sass. The main sass file is located in `FlightFinder.Client/wwwroot/sass/index.scss` which needs to be compiled down to css located at `FlightFinder.Client/wwwroot/index.css`. This project uses the ruby `sass` gem to accomplish this on change.
 
+NOTE: Project and solutions still use the name FlightFinder that was borrowed from the linked example. This name will eventually be changed.
+
 ## Deploy
 * Install Docker https://docs.docker.com/install/
 * Create docker-machine with name `web-compare` as target for deployment
@@ -19,9 +21,6 @@ Styles are managed via sass. The main sass file is located in `FlightFinder.Clie
 
 ## Crucial missing features
 * Not all dom events are implemented. Crucial events like onkeydown and oninput are not implemented which prevent a true autocomplete experience.
-
-## Nice to have missing features
-* Livereload. Currently any changes to C# or cshmtl require a full rebuild.
 
 # Reading
 * Docker Digital Ocean - https://docs.docker.com/machine/drivers/digital-ocean/#when-passing-a-boolean-value-to-any-option
