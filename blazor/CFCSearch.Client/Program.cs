@@ -1,9 +1,9 @@
-﻿using FlightFinder.Client.Services;
-using Microsoft.AspNetCore.Blazor.Browser.Rendering;
+﻿using Microsoft.AspNetCore.Blazor.Browser.Rendering;
 using Microsoft.AspNetCore.Blazor.Browser.Services;
 using Microsoft.Extensions.DependencyInjection;
+using CFCSearch.Client.Services;
 
-namespace FlightFinder.Client
+namespace CFCSearch.Client
 {
     public class Program
     {

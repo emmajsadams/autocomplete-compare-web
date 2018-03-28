@@ -6,5 +6,5 @@
 # docker rm web-compare-dev
 # docker run -i -t --rm -v $(pwd):/blazor -p 5000:5000 --name web-compare-dev web-compare-dev
 
-cd ./FlightFinder.Server
-dotnet watch run & sass --watch ../FlightFinder.Client/wwwroot/sass/index.scss:../FlightFinder.Client/wwwroot/index.css && kill $!
+cd ./CFCSearch.Server
+dotnet watch run & sass --watch ../CFCSearch.Client/wwwroot/sass/index.scss:../CFCSearch.Client/wwwroot/index.css && kill $!

@@ -1,10 +1,10 @@
-using FlightFinder.Shared;
+using CFCSearch.Shared;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace FlightFinder.Server.Controllers
+namespace CFCSearch.Server.Controllers
 {
     [Route("api/[controller]")]
     public class SearchController : Controller

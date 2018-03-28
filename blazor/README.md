@@ -17,6 +17,11 @@ Styles are managed via sass. The main sass file is located in `FlightFinder.Clie
 * Install dotnet & blazor - https://blogs.msdn.microsoft.com/webdev/2018/03/22/get-started-building-net-web-apps-in-the-browser-with-blazor/#get-started
 * Run ./dev
 
+# Evaluation
+
+## Crucial missing features
+* Not all dom events are implemented. Crucial events like onkeydown and oninput are not implemented which prevent a true autocomplete experience.
+
 # Reading & Inspiration for this Project
 * Docker Digital Ocean - https://docs.docker.com/machine/drivers/digital-ocean/#when-passing-a-boolean-value-to-any-option
 * Docker-Machine - https://docs.docker.com/machine/get-started/

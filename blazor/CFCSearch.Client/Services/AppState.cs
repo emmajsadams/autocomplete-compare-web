@@ -1,12 +1,12 @@
-﻿using FlightFinder.Shared;
-using Microsoft.AspNetCore.Blazor;
+﻿using Microsoft.AspNetCore.Blazor;
 using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using CFCSearch.Shared;
 
-namespace FlightFinder.Client.Services
+namespace CFCSearch.Client.Services
 {
     public class AppState
     {

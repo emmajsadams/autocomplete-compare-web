@@ -1,6 +1,6 @@
-﻿using FlightFinder.Shared;
+﻿using CFCSearch.Shared;
 
-namespace FlightFinder.Server
+namespace CFCSearch.Server
 {
     public class SampleData
     {

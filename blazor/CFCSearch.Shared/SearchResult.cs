@@ -1,6 +1,6 @@
 using System;
 
-namespace FlightFinder.Shared
+namespace CFCSearch.Shared
 {
     public class SearchResult
     {

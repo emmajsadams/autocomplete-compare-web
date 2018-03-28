@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FlightFinder.Client\FlightFinder.Client.csproj" />
-    <ProjectReference Include="..\FlightFinder.Shared\FlightFinder.Shared.csproj" />
+    <ProjectReference Include="..\CFCSearch.Client\CFCSearch.Client.csproj" />
+    <ProjectReference Include="..\CFCSearch.Shared\CFCSearch.Shared.csproj" />
   </ItemGroup>
 
 </Project>

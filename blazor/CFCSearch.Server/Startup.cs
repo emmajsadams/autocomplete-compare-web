@@ -10,7 +10,7 @@ using Newtonsoft.Json.Serialization;
 using System.Linq;
 using System.Net.Mime;
 
-namespace FlightFinder.Server
+namespace CFCSearch.Server
 {
     public class Startup
     {

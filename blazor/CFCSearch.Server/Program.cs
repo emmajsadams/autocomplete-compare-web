@@ -5,7 +5,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 
-namespace FlightFinder.Server
+namespace CFCSearch.Server
 {
     public class Program
     {
